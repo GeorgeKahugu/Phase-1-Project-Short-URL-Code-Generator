@@ -1,4 +1,7 @@
+document.addEventListener('DOMContentLoaded', function () {
+    
 document.getElementById('shortenUrlBtn').addEventListener('click', function() {
+   
     const longUrl = document.getElementById('longUrlInput').value.trim();
     if (longUrl === '') {
         alert('Please enter a valid long URL.');
@@ -26,3 +29,4 @@ document.getElementById('shortenUrlBtn').addEventListener('click', function() {
         alert('An error occurred while shortening the URL. Please try again later.');
     });
 });
+})
