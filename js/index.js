@@ -21,10 +21,16 @@ document.addEventListener("DOMContentLoaded", function () {
           if (data.result_url) {
             document.getElementById(
               "result"
-            ).innerHTML = `<p>Shortened URL: <a href="${data.result_url}" target="_blank">${data.result_url}</a></p>`;
+            ).innerHTML = `<p>Shortened URL: <a href="${data.longUrl}" target="_blank">${data.shortUrl}</a></p>`;
           } else {
             alert("Failed to shorten URL. Please try again.");
           }
+         function changeContent(){
+          var displayBox=
+          document.getElementById("displayBox");
+          displayBox.innerHTML="Result"
+         }
+
         })
         .catch((error) => {
           console.error("Error:", error);
